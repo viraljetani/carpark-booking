@@ -22,3 +22,37 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backend specific
+backend/node_modules/
+backend/.env
+backend/.env.local
+backend/.env.development
+backend/.env.production
+backend/.env.*.local
+backend/.env.*.development
+backend/.env.*.production
+
+# TypeScript
+backend/build/
+backend/dist/
+backend/*.tsbuildinfo
+backend/.tsconfig.tsbuildinfo
+
+# Logs
+backend/logs/
+backend/*.log
+
+# Debug
+backend/.pids
+backend/.pid
+backend/.seed
+backend/.coverage
+backend/nyc_output
+backend/coverage
+backend/lcov.info
+
+# IDE
+backend/.DS_Store
+backend/.idea/
+backend/.vscode/

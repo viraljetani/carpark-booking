@@ -20,6 +20,7 @@ export const BookingForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO: Add validation here
+    //TODO: If data is good submit to database
     console.log('Form submitted:', formData);
   };
 
