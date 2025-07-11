@@ -118,9 +118,9 @@ export const BookingForm = () => {
           <Button
             type="submit"
             variant="default"
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+            className="w-full bg-indigo-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
           >
-            Submit Booking
+            Book Now
           </Button>
         </div>
       </form>
