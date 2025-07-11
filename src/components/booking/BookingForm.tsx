@@ -43,7 +43,7 @@ export const BookingForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Enter your full name"
+              placeholder="Your full name"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
             />
           </div>
@@ -57,7 +57,7 @@ export const BookingForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="Enter your phone number"
+              placeholder="your phone number"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
             />
           </div>
@@ -76,7 +76,7 @@ export const BookingForm = () => {
                 name="startDate"
                 value={formData.startDate}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-4 py-3 text-gray-500 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
           </div>
@@ -91,7 +91,7 @@ export const BookingForm = () => {
                 name="endDate"
                 value={formData.endDate}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-4 py-3 text-gray-500 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
           </div>
@@ -108,7 +108,7 @@ export const BookingForm = () => {
             name="licencePlate"
             value={formData.licencePlate}
             onChange={handleChange}
-            placeholder="Enter your licence plate number"
+            placeholder="Your licence plate number"
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
           />
         </div>
