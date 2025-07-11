@@ -15,7 +15,7 @@ This project is for Carpark Booking application using React Typescript and Vite.
 
 - [x] Installed ShadCN UI and TailwindCSS for quickly building UI and Form components 
 - [x] Setup the project foler structure and components
-- [ ] Setup Booking Form component
+- [x] Setup Booking Form component
 - [ ] Setup Bookings List component
 - [ ] Setup Postgres Database
 - [ ] Setup API integration for booking and fetching bookings
