@@ -3,12 +3,20 @@
 This project is for Carpark Booking application using React Typescript and Vite.
 
 
-## Installation Steps
+## Installation Steps (Frontend)
 
 1. Clone the repository
 2. Install dependencies using `npm install`
 3. Run the development server using `npm run dev`
 4. Open http://localhost:5173 in your browser or the url that is displayed in your terminal
+
+
+## Installation Steps (Backend)
+
+1. cd into /backend directory
+2. Install dependencies using `npm install`
+3. Run the development server using `npm run dev`
+4. Backend will be served at: http://localhost:3001
 
 
 ## Project Timeline
