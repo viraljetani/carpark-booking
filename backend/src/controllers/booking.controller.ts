@@ -22,7 +22,7 @@ export class BookingController {
       `SELECT * FROM bookings
        ORDER BY created_at DESC`
     );
-    return result;
+    return result.rows;
   }
 
   // Get booking by ID
@@ -31,7 +31,7 @@ export class BookingController {
       'SELECT * FROM bookings WHERE id = $1',
       [id]
     );
-    return result[0] || null;
+    return result.rows[0] || null;
   }
 
   // Delete booking
