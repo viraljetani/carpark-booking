@@ -2,7 +2,7 @@ import { Input } from "../ui/input";
 import { useState } from 'react';
 import { Label } from "../ui/label";
 import { Button } from "../ui/button";
-import axios from 'axios';
+import { api } from '@/services/api'
 
 export const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -13,16 +13,52 @@ export const BookingForm = () => {
     endDate: ''
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    setError(null);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: Add validation here
-    //TODO: If data is good submit to database
-    console.log('Form submitted:', formData);
+    setLoading(true);
+    setError(null);
+
+    try {
+      //Validation
+      if (!formData.name || !formData.phone || !formData.licencePlate || !formData.startDate || !formData.endDate) {
+        setError('All fields are required');
+        setLoading(false);
+        return;
+      }
+
+      const bookingData = {
+        ...formData,
+        startDate: new Date(formData.startDate).toISOString(),
+        endDate: new Date(formData.endDate).toISOString(),
+      };
+
+      await api.post('/bookings', bookingData);
+      alert('Booking submitted successfully!');
+
+      setFormData({
+        name: '',
+        phone: '',
+        licencePlate: '',
+        startDate: '',
+        endDate: ''
+      });
+    } catch (error: any) {
+      console.error('Error submitting form:', error);
+      setError('Failed to submit form');
+      setLoading(false);
+    } finally {
+      setLoading(false);
+    }
+
   };
 
   return (
@@ -45,6 +81,7 @@ export const BookingForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              required
               placeholder="Your full name"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
             />
@@ -59,6 +96,7 @@ export const BookingForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              required
               placeholder="your phone number"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
             />
@@ -78,6 +116,7 @@ export const BookingForm = () => {
                 name="startDate"
                 value={formData.startDate}
                 onChange={handleChange}
+                required
                 className="w-full px-4 py-3 text-gray-500 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
@@ -93,6 +132,7 @@ export const BookingForm = () => {
                 name="endDate"
                 value={formData.endDate}
                 onChange={handleChange}
+                required
                 className="w-full px-4 py-3 text-gray-500 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
@@ -110,19 +150,27 @@ export const BookingForm = () => {
             name="licencePlate"
             value={formData.licencePlate}
             onChange={handleChange}
+            required
             placeholder="Your licence plate number"
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
           />
         </div>
+
+        {error && (
+          <div className="text-red-500 text-sm">
+            {error}
+          </div>
+        )}
 
         {/* Submit Button */}
         <div className="mt-8">
           <Button
             type="submit"
             variant="default"
+            disabled={loading}
             className="w-full bg-indigo-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
           >
-            Book Now
+            {loading ? 'Booking...' : 'Book Now'}
           </Button>
         </div>
       </form>
