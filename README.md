@@ -14,9 +14,18 @@ This project is for Carpark Booking application using React Typescript and Vite.
 ## Installation Steps (Backend)
 
 1. cd into /backend directory
-2. Install dependencies using `npm install`
-3. Run the development server using `npm run dev`
-4. Backend will be served at: http://localhost:3001
+2. Create a .env file in the /backend directory and add the variables for the DB connection:
+
+```
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_NAME=postgres
+```
+3. Install dependencies using `npm install`
+4. Run the development server using `npm run dev`
+5. Backend will be served at: http://localhost:3001
 
 
 ## Project Timeline

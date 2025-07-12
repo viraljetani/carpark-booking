@@ -2,6 +2,7 @@ import { Input } from "../ui/input";
 import { useState } from 'react';
 import { Label } from "../ui/label";
 import { Button } from "../ui/button";
+import axios from 'axios';
 
 export const BookingForm = () => {
   const [formData, setFormData] = useState({
