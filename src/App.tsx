@@ -12,7 +12,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/' element={<BookingForm />} />
-        <Route path="/booking" element={<BookingForm />} />
+        <Route path="/booking-form" element={<BookingForm />} />
         <Route path="/bookings" element={<BookingList />} />
       </Routes>
     </Router>

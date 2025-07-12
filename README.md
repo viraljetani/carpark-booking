@@ -17,8 +17,13 @@ This project is for Carpark Booking application using React Typescript and Vite.
 - [x] Setup the project foler structure and components
 - [x] Setup Booking Form component
 - [x] Setup Bookings List component
-- [ ] Setup Postgres Database
-- [ ] Setup API integration for booking and fetching bookings
+- [x] Setup Postgres Database
+- [x] Setup Express app in the /backend directory
+- [x] Setup APIs for bookings and fetching bookings
+- [] Update BookingForm component to use the API with axios call
+- [] Update BookingForm component to handle form submission
+- [] Update BookingsList component to use the API with axios call
+- [] Update BookingsList component to display the bookings
 - [ ] Form Validation
 - [ ] Error Handling
 - [ ] Tests with vitest for API
