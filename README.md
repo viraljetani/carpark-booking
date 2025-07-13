@@ -17,11 +17,16 @@ This project is for Carpark Booking application using React Typescript and Vite.
 2. Create a .env file in the /backend directory and add the variables for the DB connection:
 
 ```
+# Local PostgreSQL
 DB_HOST=localhost
-DB_PORT=5432
+DB_PORT=5433
 DB_USER=postgres
-DB_PASSWORD=postgres
-DB_NAME=postgres
+DB_PASSWORD=
+DB_NAME=db_carpark
+
+# Server
+PORT=3001
+
 ```
 3. Install dependencies using `npm install`
 4. Run the development server using `npm run dev`
