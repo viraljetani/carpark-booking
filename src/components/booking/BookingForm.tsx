@@ -37,8 +37,8 @@ export const BookingForm = () => {
 
       const bookingData = {
         ...formData,
-        startDate: new Date(formData.startDate).toISOString(),
-        endDate: new Date(formData.endDate).toISOString(),
+        start_date: new Date(formData.startDate).toISOString(),
+        end_date: new Date(formData.endDate).toISOString(),
       };
 
       await api.post('/bookings', bookingData);
