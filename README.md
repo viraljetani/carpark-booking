@@ -37,10 +37,10 @@ DB_NAME=postgres
 - [x] Setup Postgres Database
 - [x] Setup Express app in the /backend directory
 - [x] Setup APIs for bookings and fetching bookings
-- [] Update BookingForm component to use the API with axios call
-- [] Update BookingForm component to handle form submission
-- [] Update BookingsList component to use the API with axios call
-- [] Update BookingsList component to display the bookings
-- [ ] Form Validation
-- [ ] Error Handling
-- [ ] Tests with vitest for API
+- [x] Update BookingForm component to use the API with axios call
+- [x] Update BookingForm component to handle form submission
+- [x] Update BookingsList component to use the API with axios call
+- [x] Update BookingsList component to display the bookings
+- [x] Form Validation
+- [x] Error Handling
+- [x] Tests with vitest for BookingList component
