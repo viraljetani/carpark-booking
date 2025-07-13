@@ -28,6 +28,13 @@ DB_NAME=postgres
 5. Backend will be served at: http://localhost:3001
 
 
+## Testing
+
+1. Run the tests using `npm run test`
+2. Run the tests in watch mode using `npm run test:watch`
+3. Run the tests in UI mode using `npm run test:ui`
+
+
 ## Project Timeline
 
 - [x] Installed ShadCN UI and TailwindCSS for quickly building UI and Form components 
