@@ -56,3 +56,32 @@ PORT=3001
 - [x] Form Validation
 - [x] Error Handling
 - [x] Tests with vitest for BookingList component
+
+
+##Improvements / What can be done?
+
+Based on the time I had, I was mainly focused on preparing a basic application where the backend and frontend works together.
+
+Frontend:
+- [ ] Add more Form Validations
+- [ ] Time in Date picker
+- [ ] Add Tests for form submission and API calls for BookingForm component
+
+Backend:
+- [ ] Add Tests for API calls for bookings and fetching bookings
+- [ ] Add more error handling
+- [ ] Add more logging (like logging on a file or database for API calls to track the usage)
+- [ ] Add more security (like authentication and authorization) can use basic JWT authentication.
+- [ ] Add more features (like user roles, permissions, etc.), Car management, User management, Parking management
+
+Database:
+- [] Data normalization 
+Currently the booking table consists of all the user data and the booking data which should be normalized into different tables.
+e.g., 
+users - id, name, phone
+user_cars - id, user_id, licence_plate
+bookings - id, user_car_id, parking_id, start_date, end_date
+parkings - id, name, address, capacity
+roles - id, name
+permissions - id, role_id, permission
+user_roles - id, user_id, role_id
